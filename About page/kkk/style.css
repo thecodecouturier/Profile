@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+/* ✅ Header */
+header {
+  position: relative;
+  z-index: 20;
+  padding-top: 70px;       /* ← بدل 60 */
+  margin-bottom:600px;    /* ← يضغط المسافة على الصور */
+}
+
+.about-text {
+  margin-left: 15px;
+  max-width: 50%;
+  position: relative;
+  z-index: 20;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.section-subtitle {
+  font-weight: 300;
+  font-size: 16px;
+  color: #bbb;
+  margin-right: 10px;
+  margin-bottom: 0px;
+}
+
+/*.line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #bbb;
+   margin-bottom: 0px;
+}*/
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: #cba96f;
+  margin-top: 0;            /* ← أضف هذا السطر */
+  margin-bottom: 40px;
+}
+
+.slider {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  flex-direction: row;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.section.active {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 1;
+}
+
+.content {
+  width: 45%;
+  opacity: 0;
+}
+
+.content.text {
+  text-align: center;
+}
+
+.content img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+}

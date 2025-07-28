@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Adrien Jalbtier - Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Google Translate Script -->
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<!-- ✅ Glass Navigation Bar -->
+<nav class="navbar">
+  <div class="navbar-left">
+    <!-- ✅ زر الهامبرغر (ظاهر فقط على الشاشات الصغيرة) -->
+<button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+  ☰
+</button>
+    <div class="logo">Adrien Jalbtier</div>
+  </div>
+
+  <ul class="navbar-center">
+    <li><a href="../../Home page/Home.html" class="nav-link">Home</a></li>
+    <li><a href="#about" class="nav-link">About</a></li>
+    <li class="portfolio-item">
+  <a href="../Portfolio pages" class="nav-link" id="portfolioLink">Portfolio</a>
+</li>
+
+<!-- ✅ New Dropdown Outside UL but visually linked -->
+<div class="portfolio-dropdown">
+  <a href="../Portfolio pages/Runway page/index.html" class="dropdown-link">Runway</a>
+  <a href="#fashion" class="dropdown-link">Fashion</a>
+  <a href="#campaign" class="dropdown-link">Campaign</a>
+  <a href="#editorial" class="dropdown-link">Editorial</a>
+  <a href="#beauty" class="dropdown-link">Beauty</a>
+  <a href="#lifestyle" class="dropdown-link">Lifestyle</a>
+  <a href="#accessories" class="dropdown-link">Accessories</a>
+  <a href="#designs" class="dropdown-link">My Designs</a>
+</div>
+
+    <li><a href="#contact" class="nav-link">Contact</a></li>
+  </ul>
+
+  <div class="navbar-right">
+    <div class="language-toggle">
+      <button id="languageBtn" class="notranslate" translate="no">
+  <img id="languageFlag" src="https://flagcdn.com/w20/gb.png" alt="flag">
+  <span id="languageCode">EN</span>
+</button>
+</div>
+</div>
+
+<ul class="language-dropdown" id="languageDropdown">
+  <li><a href="#" data-lang="en"><img src="https://flagcdn.com/w20/gb.png" alt="English"> English</a></li>
+  <li><a href="#" data-lang="fr"><img src="https://flagcdn.com/w20/fr.png" alt="Français"> Français</a></li>
+  <li><a href="#" data-lang="it"><img src="https://flagcdn.com/w20/it.png" alt="Italiano"> Italiano</a></li>
+  <li><a href="#" data-lang="es"><img src="https://flagcdn.com/w20/es.png" alt="Español"> Español</a></li>
+  <li><a href="#" data-lang="de"><img src="https://flagcdn.com/w20/de.png" alt="Deutsch"> Deutsch</a></li>
+  <li><a href="#" data-lang="pt"><img src="https://flagcdn.com/w20/pt.png" alt="Português"> Português</a></li>
+  <li><a href="#" data-lang="ru"><img src="https://flagcdn.com/w20/ru.png" alt="Русский"> Русский</a></li>
+  <li><a href="#" data-lang="ja"><img src="https://flagcdn.com/w20/jp.png" alt="日本語"> 日本語</a></li>
+  <li><a href="#" data-lang="ko" class="notranslate" translate="no"><img src="https://flagcdn.com/w20/kr.png" alt="한국어"> 한국어</a></li>
+  <li><a href="#" data-lang="ar"><img src="https://flagcdn.com/w20/sa.png" alt="العربية"> العربية</a></li>
+</ul>
+</nav>
+
+<!-- ✅ Hidden Translate Element -->
+<div id="google_translate_element" style="display: none;"></div>
+
+<!-- ✅ القائمة الجانبية -->
+<div class="side-menu" id="sideMenu">
+  <button class="close-btn" id="closeSideMenu" aria-label="Close menu">
+    <!-- SVG X -->
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path d="M18 6L6 18" stroke="#f33" stroke-width="2" stroke-linecap="round"/>
+      <path d="M6 6L18 18" stroke="#f33" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </button>
+
+  <ul class="side-nav">
+    <li><a href="../../Home page/Home.html">Home</a></li>
+    <li><a href="#about">About</a></li>
+    
+    <li class="side-portfolio-item">
+      <button id="sidePortfolioToggle" class="portfolio-toggle-btn">
+  Portfolio
+  <svg class="arrow-icon" width="12" height="12" viewBox="0 0 24 24" fill="none">
+    <path d="M6 9l6 6 6-6" stroke="#ccc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+      <ul class="side-portfolio-dropdown" id="sidePortfolioDropdown">
+        <li><a href="../Portfolio pages/Runway page/index.html">Runway</a></li>
+        <li><a href="#fashion">Fashion</a></li>
+        <li><a href="#campaign">Campaign</a></li>
+        <li><a href="#editorial">Editorial</a></li>
+        <li><a href="#beauty">Beauty</a></li>
+        <li><a href="#lifestyle">Lifestyle</a></li>
+        <li><a href="#accessories">Accessories</a></li>
+        <li><a href="#designs">My Designs</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div>
+
+<body>
+  <div class="grid-wrapper">
+  <!-- Header -->
+  <header class="about-section">
+    <div class="about-text">
+      <div class="section-header">
+        <span class="section-subtitle">PORTFOLIO</span>
+        <div class="line"></div>
+      </div>
+      <h2 class="section-title">Accessories</h2>
+    </div>
+  </header>
+
+  <!-- Gallery Images -->
+  <div class="gallery-img-wrapper"><img src="images/1.jpg" class="gallery-img" alt="Photo 1"><div class="overlay"></div></div>
+  <div class="gallery-img-wrapper"><img src="images/2.jpg" class="gallery-img" alt="Photo 2"><div class="overlay"></div></div>
+  <div class="gallery-img-wrapper"><img src="images/3.jpg" class="gallery-img" alt="Photo 3"><div class="overlay"></div></div>
+  <div class="gallery-img-wrapper"><img src="images/4.jpg" class="gallery-img" alt="Photo 4"><div class="overlay"></div></div>
+  <div class="gallery-img-wrapper"><img src="images/5.jpg" class="gallery-img" alt="Photo 4"><div class="overlay"></div></div>
+  <div class="gallery-img-wrapper"><img src="images/6.jpg" class="gallery-img" alt="Photo 4"><div class="overlay"></div></div>
+  <!-- أضف المزيد حسب الحاجة -->
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-header">
+      <div class="slideshow-controls">
+        <!-- زر التشغيل -->
+<div class="play-button" id="playButton">
+  <span id="playIcon">
+    <!-- ▶ Play -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white">
+      <path d="M8 5v14l11-7z"/>
+    </svg>
+  </span>
+</div>
+        <div class="image-counter" id="imageCounter">1 / 4</div>
+      </div>
+      <!-- زر الإغلاق -->
+<span class="close-btn" id="closeLightbox">
+  <!-- × Close -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="white">
+    <path d="M18.3 5.71a1 1 0 0 0-1.41 0L12 10.59 7.11 5.7A1 1 0 0 0 5.7 7.11L10.59 12l-4.89 4.89a1 1 0 0 0 1.41 1.41L12 13.41l4.89 4.89a1 1 0 0 0 1.41-1.41L13.41 12l4.89-4.89a1 1 0 0 0 0-1.4z"/>
+  </svg>
+</span>
+    </div>
+    <div class="lightbox-content">
+      <!-- زر السابق ◀ -->
+<div class="lightbox-nav left" id="prevBtn">
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
+    <path d="M15.41 7.41 14 6 8 12l6 6 1.41-1.41L10.83 12z"/>
+  </svg>
+</div>
+      <img class="lightbox-img" id="lightboxImg" src="" alt="Expanded" />
+      <!-- زر التالي ▶ -->
+<div class="lightbox-nav right" id="nextBtn">
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
+    <path d="M8.59 16.59 10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+  </svg>
+</div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © Adrien Jalbtier 2025–<span id="year"></span>. All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.6.0/color-thief.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

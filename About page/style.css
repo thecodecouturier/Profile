@@ -1,0 +1,142 @@
+body {
+  /* ...existing code... */
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.section {
+  scroll-snap-align: start;
+}
+/* إعدادات عامة */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0D0D0D;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.about-text {
+  margin-left: 15px;
+  max-width: 50%;
+  margin-left: 60px;
+  margin-top: 100px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.section-subtitle {
+  font-weight: 300;
+  font-size: 16px;
+  color: #bbb;
+  margin-right: 10px;
+  margin-bottom: 0px;
+}
+
+.line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #bbb;
+   margin-bottom: 0px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: #cba96f;
+  margin-top: 0;            /* ← أضف هذا السطر */
+  margin-bottom: 40px;
+}
+
+/* الأقسام */
+.section {
+  width: 100vw;
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+/* المحتوى */
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  gap: 5%;
+}
+
+.content.reverse {
+  flex-direction: row-reverse;
+}
+
+/* النص والصورة */
+.text,
+.image {
+  width: 45%;
+}
+
+/* الفقرات */
+.paragraph {
+  opacity: 0;
+  transform: translateX(-80px);
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* الصور */
+.image img {
+  opacity: 0;
+  width: 100%;
+  max-height: 80vh;
+  object-fit: cover;
+  border-radius: 10px;
+  transform: translateY(100px);
+}
+
+.section:first-of-type .image img {
+  margin-bottom: 150px;
+  margin-top: 0;
+  transform: translateY(-1000px);
+}
+
+/* الفوتر */
+footer {
+  color: #fff;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 1rem;
+  width: 100%;
+}
+
+/* عداد السكشن */
+#section-counter {
+  position: fixed;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%) rotate(180deg);
+  writing-mode: vertical-rl;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #cba96f;
+  z-index: 999;
+  user-select: none;
+}

@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  overflow-x: hidden;
+  background-color: #111;
+  color: #fff;
+}
+
+.hero-section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.content-container {
+  display: flex;
+  width: 90%;
+  max-width: 1200px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.image-area {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.animated-text {
+  font-size: 2rem;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 1s ease;
+}
+
+.animated-img {
+  width: 400px;
+  height: auto;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 1s ease;
+}
+
+/* Visible state */
+.visible .animated-text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.visible .animated-img {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scroll animation classes */
+.scroll-hide-text {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.5s ease;
+}
+
+.scroll-hide-img {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: all 0.5s ease;
+}
+
+
+
+.section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3rem;
+}

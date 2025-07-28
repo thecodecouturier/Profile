@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  overflow-x: hidden;
+  font-family: 'Arial', sans-serif;
+  background: #111;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+.page-container {
+  width: 100%;
+}
+
+.section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  position: relative;
+}
+
+/* دعم الاتجاه RTL */
+[dir="rtl"] .section {
+  flex-direction: row-reverse;
+}
+
+.content {
+  width: 45%;
+  will-change: transform, opacity;
+}
+
+.content.text {
+  text-align: center;
+}
+
+.content.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* التنسيقات الأولية للأنيميشن */
+.init-anim {
+  opacity: 0;
+}
+
+.init-anim.image {
+  transform: translateY(100px);
+}
+
+.init-anim.text.left {
+  transform: translateX(-100px);
+}
+
+.init-anim.text.right {
+  transform: translateX(100px);
+}
